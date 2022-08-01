@@ -9,13 +9,35 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/material": "^5.9.2",
+    "bootstrap": "^5.2.0",
+    "font-awesome": "^4.7.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-bootstrap": "^2.4.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "redux": "^4.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.0",
     "vite": "^3.0.0"
-  }
+  },
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdfixi/projet-d-ete.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hdfixi/projet-d-ete/issues"
+  },
+  "homepage": "https://github.com/hdfixi/projet-d-ete#readme",
+  "description": ""
 }
