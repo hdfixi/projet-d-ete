@@ -1,33 +1,61 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import Dashboard from './pages/Dashboard'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Login from './pages/Login';
+import New from './pages/New';
+import ListUser from './pages/ListUser';
+import Single from './pages/Single';
+import ListOccupation from './pages/ListOccupation';
+import ProfileAdmin  from './pages/ProfileAdmin';
+import { occupationInput, profileAdmin } from './formSource';
+import Ads from './pages/Ads';
+import Comments from './pages/Comments'
+
+import { Navigate } from "react-router-dom";
+import { useContext } from 'react';
+import { AuthContext } from './context/AuthContext';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const {currentUser} = useContext(AuthContext)
 
+
+  const RequireAuth = ({children}) => {
+    return currentUser ? (children) : <Navigate to="/login"/> //if there is user go to children elso go to login page
+    
+  }
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <>
+       <BrowserRouter>
+          <Routes>
+            <Route path='/'>
+            <Route path='login' element={<Login/>} />
+              <Route index element={<RequireAuth><Dashboard/></RequireAuth>} />
+              
+              <Route path='profile' element={<RequireAuth><ProfileAdmin inputs= {profileAdmin} title="Edit profile"/></RequireAuth>} />
+              <Route path='users'>
+                <Route index element={<RequireAuth><ListUser/></RequireAuth>} />
+                <Route path=':userId' element={<RequireAuth><Single/></RequireAuth>} />
+                <Route path='new' element={<RequireAuth><New/></RequireAuth>} />
+              </Route>
+              <Route path='occupation'>
+                <Route index element={<RequireAuth><ListOccupation/></RequireAuth>}></Route>
+                <Route path=':id' element={<RequireAuth><Single/></RequireAuth>}></Route>
+                <Route path='new' element={<RequireAuth><ProfileAdmin inputs={occupationInput} title="Add new category"/></RequireAuth>}></Route>
+              </Route>
+              <Route path='ads' element= {<RequireAuth><Ads/></RequireAuth>}></Route>
+              <Route path='profile/:id' element={<RequireAuth><ProfileAdmin inputs= {occupationInput} title="Edit category"/></RequireAuth>} />
+              <Route path='comments' element= {<RequireAuth><Comments/></RequireAuth>}></Route>
+              
+              
+              
+              
+            </Route>
+          </Routes>
+        </BrowserRouter>
+     </>
   )
 }
 
