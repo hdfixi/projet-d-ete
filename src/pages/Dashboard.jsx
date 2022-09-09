@@ -1,7 +1,7 @@
-import Occupation from './Occupation'
 import SidebarAdmin from '../Component/SidebarAdmin'
 import NavbarAdmin from '../Component/NavbarAdmin'
 import Widget from '../Component/Widget'
+import Chart from '../Component/Chart';
 
 const Dashboard = () => {
     return(
@@ -16,9 +16,12 @@ const Dashboard = () => {
                         <Widget type="comment"/>
                         <Widget type="occupation"/>
                     </div>
-                    <div className='listContainer'>
+                    {/* <div className='listContainer'>
                         <div className='listTitle'>Lates occupation</div>
                         <Occupation/>
+                    </div> */}
+                    <div className='charts'>
+                        <Chart/>
                     </div>
                 </div>
             </div>

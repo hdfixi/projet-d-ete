@@ -1,3 +1,36 @@
+/*login*/
+.login {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login form input {
+    width: 200px;
+    height: 30px;
+    margin: 10px;
+}
+.login form button {
+    width: 200px;
+    height: 30px;
+    border: none;
+    background-color: #48bb78;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.login form span {
+    font-size: 12px;
+    color: red;
+    margin-top: 5px;
+}
+
+
 .Home{
     display: flex;
 }
@@ -19,19 +52,26 @@
     color: black;
     border-right: 0.5px solid rgb(38, 2, 2);
     min-height: 100vh;
+    background-color: #F5F5F5;
     
 }
 .sidebar .top{
     height: 50px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    color: #4D6876;
-    font-weight: bold;
+    border-bottom: 0.5px solid gray;
+    font-weight: bold 0.5 gray;
     font-size: 20px;
+    background-color: #F5F5F5;
+    font-weight: bold;
+}
+.sidebar .top .logo {
+    color: #48bb78;
 }
 .sidebar .center {
-    padding-left: 15px;
+    padding-left: 20px;
+    
 }
 .sidebar .center .title {
     font-size: 10px;
@@ -49,7 +89,7 @@
     background-color:#F5F5F5 ; 
 }
 .sidebar .center li span{
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 600;
     color: #4D6876;
 }
@@ -105,11 +145,12 @@ a {
 }
 .navbar{
     height: 50px;
-    border-bottom: 0.5px solid rgb(231, 228, 228);
+    border-bottom: 0.5px solid gray;
     display: flex;
     align-items: center;
-    font-size: 14px;
-    color: #555;
+    font-size: 17px;
+    color: #4D6876;
+    
 }
 .navbar .wrapper{
     display: flex;
@@ -132,7 +173,87 @@ a {
 .navbar .profile{
     padding-right: 70px;
 }
-
+/*Profile*/
+.profile{
+    width: 100%;
+    display: flex;
+}
+.profile .profileContainer{
+    flex: 6;
+}
+.profile .profileContainer .top,.bottom {
+    box-shadow: 8px 8px 15px -8px rgba(0,0,0,0.72);
+    -webkit-box-shadow: 8px 8px 15px -8px rgba(0,0,0,0.72);
+    -moz-box-shadow: 8px 8px 15px -8px rgba(0,0,0,0.72);
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+    
+}
+.profile .profileContainer .top h1{
+    color: gray;
+    font-size: 20px;
+    padding-left: 30px;
+}
+.profile .profileContainer .bottom .left{
+    flex: 1;
+    text-align: center;
+}
+.profile .profileContainer .bottom .right{
+    flex: 2;
+}
+.profile .profileContainer .bottom .right form{
+    display: flex;
+    flex-wrap: wrap;
+    gap :30px;
+    
+}
+.profile .profileContainer .bottom .right form button{
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: #48bb78;
+    border: 1px dotted #48bb78;
+    cursor: pointer;
+    background-color: #48bb78;
+    color: white;
+    width: 100px;
+    font-weight: 400;
+    /* width: 110px;
+    padding: 10px;
+    border: none;
+    background-color: #48bb78;
+    color: white;
+    font-weight: bold;
+    align-content: flex-start;
+    text-align: center;
+    margin-top: 10px; */
+}
+.profile .profileContainer .bottom .right form .formInput{
+    width: 40%;
+}
+.profile .profileContainer .bottom .right form .formInput{
+   
+    align-items: center;
+    gap: 10px;
+}
+.profile .profileContainer .bottom .right form .formInput input {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+.profile .profileContainer .bottom .img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.chooseicon {
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    cursor: pointer;
+}
 /*widget*/
 .widgets{
     display: flex;
@@ -168,6 +289,8 @@ a {
 .widget .left .link{
     font-size: 13px;
     border-bottom: 1px solid gray;
+    color:#4D6876;
+
 }
 .widget .right{
     display: flex;
@@ -183,17 +306,46 @@ a {
     height: 25px;
     width: 25px;
     padding: 2px;
+    
 }
+/*chart*/
+.chart{
+    flex: 4;
+    box-shadow: 8px 8px 15px -8px rgba(0,0,0,0.72);
+    -webkit-box-shadow: 8px 8px 15px -8px rgba(0,0,0,0.72);
+    -moz-box-shadow: 8px 8px 15px -8px rgba(0,0,0,0.72);
+    padding: 10px;
+    color: gray;
+
+}
+.chart .title {
+    margin-bottom: 20px;
+    margin-left: 18px;
+    font-size: 20px;
+    
+}
+.chart .chartGrid {
+    stroke: rgb(223, 222, 222);
+}
+
+
+
+
+
+
+
+
+
 
 /*table*/
 
-.listContainer{
+/*.listContainer{
     box-shadow: 8px 8px 15px -8px rgba(0,0,0,0.72);
     -webkit-box-shadow: 8px 8px 15px -8px rgba(0,0,0,0.72);
     -moz-box-shadow: 8px 8px 15px -8px rgba(0,0,0,0.72);
     margin: 20px;
     padding: 20px;
-}
+} */
 .listContainer .listTitle {
     font-weight: 500;
     color: gray;
@@ -215,4 +367,111 @@ a {
     border-radius:50%;
     margin-right: 10px;
     object-fit: cover;
+} 
+
+/*datatable*/
+
+.list{
+    display: flex;
+    width: 100%;
+
+}
+.list .listContainer {
+    flex: 6;
+}
+.datatable{
+    height: 600px;
+    padding: 20px;
+}
+.datatable .datatabletitle{
+    width:100%;
+    font-size: 24px;
+    color: gray;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.datatable .datatabletitle .link {
+    text-decoration: none;
+    color: darkblue;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid darkblue;
+    padding:5px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.datatable .cellWithImg {
+    display: flex;
+    align-items: center;
+}
+.datatable .cellWithImg .cellImg{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+.cellAction{
+    display :flex;
+    align-items: center;
+    gap: 15px;
+
+}
+.cellAction .viewButton {
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: #48bb78;
+    border: 1px dotted #48bb78;
+    cursor: pointer;
+
+}
+.cellAction .deleteButton {
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: crimson;
+    border: 1px dotted crimson;
+    cursor: pointer;
+
+}
+
+/*comment*/
+.comment .commenttitle{
+    width:100%;
+    font-size: 24px;
+    color: gray;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+
+    
+}
+.comment .singleComment {
+    padding: 2px 5px;
+    margin: 20px;
+    border-radius: 5px;
+    border: 1px dotted #48bb78;
+}
+.comment .singleComment .deleteButton{
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: crimson;
+    border: 1px dotted crimson;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px;
+    margin-left: 90%;
+
+}
+.comment .singleComment .cellImg{
+    height: 40px;
+    width: 40px;
+}
+.comment .singleComment .commentdate{
+    color: gray;
+    font-size: 12px;
 }
