@@ -1,0 +1,112 @@
+nav {
+	border-bottom: 1px solid rgb(229, 227, 227);
+	margin-bottom: 43px;
+}
+.nav-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+    height: 80px;
+	max-width: 1280px;
+	padding: 0 30px;
+	margin: 0 auto;
+}
+
+.nav-brand {
+	font-size: 28px;
+	font-weight: 900;
+}
+
+.menu {
+	display: none;
+	justify-content: flex-end;
+}
+
+.menu a {
+	padding: 8px 16px;
+	text-decoration: none;
+	color: var(--primary);
+	border-radius: 90px;
+}
+
+.menu a:hover {
+	color: rgb(242, 247, 242);
+	background-color: #48bb78;
+}
+
+.hamburger {
+	display: block;
+	user-select: none;
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: pointer;
+}
+
+.hamburger span {
+	display: block;
+	width: 33px;
+	height: 4px;
+	margin-bottom: 5px;
+	background-color: #28414F;
+	border-radius: 6px;
+	transform-origin: 0 0;
+	transition: 0.4s;
+}
+
+.hamburger:hover span:nth-child(2) {
+	transform: translateX(10px);
+	background-color: #48bb78;
+}
+
+.active-hamburger:hover span {
+	background-color: #808080;
+}
+.active-hamburger span:nth-child(1) {
+	transform: translate(0px, -2px) rotate(44deg);
+}
+.active-hamburger span:nth-child(2) {
+	transform: translate(0px, -2px) rotate(44deg);
+	opacity: 0;
+}
+.active-hamburger span:nth-child(3) {
+	transform: translate(-2px, 5px) rotate(-44deg);
+}
+
+.nav-dropdown {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+	width: 100vw;
+	height: 100%;
+	padding: 10px 0;
+	background-color: #48bb78;
+}
+.nav-dropdown a {
+	padding: 8px 16px;
+	margin: 0 16px;
+
+	text-decoration: none;
+	color: white;
+	border-radius: 90px;
+}
+.nav-dropdown a:hover {
+	color: #28414F;
+	background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+	.hamburger {
+		display: none;
+	}
+	.menu {
+		display: block;
+	}
+
+	.nav-dropdown {
+		display: none;
+	}
+}

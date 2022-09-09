@@ -1,0 +1,57 @@
+body{
+    margin-left: 10px;
+}
+
+.bo1{
+    background: rgb(2, 0, 36);
+        background: linear-gradient(210deg, #348756 0%, #48bb78 35%, #82f8b1 91%);
+    height: 310px;
+    border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+    
+}
+.bo2 p{
+    font-size: 26px;
+    padding-top: 13%;
+    margin-top: -10%;
+    margin-left: 650px!important;
+ 
+}
+.image{
+    margin-top: -12%;
+    margin-left: 600px;
+    border: solid 10px rgb(255, 255, 255);
+    height: 200px;
+    width: 200px;
+    border-radius: 90%;
+}
+.bo{
+    border-bottom: 1px solid rgb(206, 205, 205);
+	margin-bottom: 30px!important;
+    margin-left: 80px;
+    margin-right: 80px;
+
+}
+
+.bo2{
+    margin-top: -13%;
+    
+    height: 230px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+@media screen and (max-width:768px)
+{  
+    .image{
+       margin-left: 140px;
+        align-self: center;
+    }
+    .bo2 p{
+        font-size: 20px;
+        padding-top: 13%;
+        margin-left: 180px!important;
+    }
+
+}
